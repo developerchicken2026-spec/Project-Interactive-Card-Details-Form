@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <header class="container">
+      <div class="group-img-details">
+        <img class="img-bg" src="./images/bg-main-mobile.png" alt="img bg" />
+        <div class="group-back">
+          <img
+            class="img-back"
+            src="./images/bg-card-back.png"
+            alt="card back"
+          />
+          <p>000</p>
+        </div>
+        <div class="group-front">
+          <img
+            class="img-front"
+            src="./images/bg-card-front.png"
+            alt="card front"
+          />
+          <img class="icon-logo" src="./images/card-logo.svg" alt="" />
+          <h1>0000 0000 0000 0000</h1>
+          <div class="text-company-year">
+            <p>Jane Appleseed</p>
+            <span> 00/00</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="group-input-details">
+        <div class="input-name">
+          <label for="name">Cardholder Name</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="e.g. Jane
+    Appleseed"
+          />
+          <p class="error-name">Wrong name, plase again</p>
+        </div>
+        <div class="input-number">
+          <label for="number">Card Number</label>
+          <input
+            id="number"
+            type="text"
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+          <p class="error-number">Wrong number, plase again</p>
+        </div>
+        <div class="input-date">
+          <label for="month year cvc"
+            >Exp. Date (MM/YY) YY <span>CVC</span></label
+          >
+          <div class="inputs-month-year-cvc">
+            <input class="month" id="month" type="text" placeholder="MM " />
+            <input class="year" id="year" type="text" placeholder="YY" />
+            <input class="cvc" id="cvc" type="text" placeholder="e.g. 123" />
+          </div>
+          <div class="group-error">
+            <p class="error-year">Wrong year, plase again</p>
+            <p class="error-month">Wrong month, plase again</p>
+            <p class="error-cvc">Wrong cvc, plase again</p>
+          </div>
+          <button class="btn">Confirm</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

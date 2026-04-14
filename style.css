@@ -1,0 +1,323 @@
+/* Import font từ Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+:root {
+  /* Colors - Primary */
+  --gradient-active: linear-gradient(
+    to right,
+    hsl(249, 99%, 64%),
+    hsl(278, 94%, 30%)
+  );
+  --error-red: hsl(0, 100%, 66%);
+
+  /* Colors - Neutral */
+  --white: hsl(0, 100%, 100%);
+  --gray-200: hsl(270, 3%, 87%);
+  --gray-400: hsl(212, 12%, 71%);
+  --purple-950: hsl(278, 68%, 11%);
+
+  /* Typography */
+  --font-main: "Space Grotesk";
+  --base-size: 18px; /* Theo style guide mày đưa */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--base-size);
+  font-weight: 500;
+  color: var(--purple-950);
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/*----------CONTAINER--------------*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 375px;
+  width: 100%;
+  position: relative;
+}
+/*----------------------------------------*/
+
+/*-----------------GROUP IMG---------------*/
+.img-bg {
+  width: 100%;
+}
+
+.group-img-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+/*----------------GROUP BACK-------------*/
+.img-back {
+  width: 75%;
+  position: absolute;
+  z-index: 1;
+  top: 2rem;
+  right: 1rem;
+}
+
+.group-back {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-back p {
+  position: absolute;
+  z-index: 2;
+  top: 38.5%;
+  right: 12%;
+  font-size: 0.8rem;
+  line-height: 2.5;
+  text-align: right;
+  color: var(--gray-200);
+}
+
+/*-------------GROUP FRONT------------*/
+.group-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.img-front {
+  width: 80%;
+  position: absolute;
+  z-index: 2;
+  left: 5%;
+  top: 50%;
+}
+
+.icon-logo {
+  width: 15%;
+  position: absolute;
+  z-index: 3;
+  top: 60%;
+  left: 10%;
+}
+
+h1 {
+  position: absolute;
+  z-index: 3;
+  font-size: 1.5rem;
+  left: 10%;
+  top: 85%;
+  color: var(--gray-200);
+  font-weight: 100;
+  font-family: inherit;
+}
+
+.text-company-year {
+  position: absolute;
+  z-index: 3;
+  top: 105%;
+  left: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  color: var(--gray-400);
+}
+
+.text-company-year p {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.text-company-year span {
+  font-size: 0.7rem;
+}
+/*----------------------------*/
+
+/*-----------INPUT DEATAILS-----------*/
+.group-input-details {
+  margin: 5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1rem;
+  width: 100%;
+  font-family: inherit;
+}
+
+.input-name {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+  margin: 0 1rem 0 1rem;
+  font-family: inherit;
+}
+
+.input-name label {
+  font-size: 1rem;
+}
+
+.input-name input {
+  width: 89%;
+  padding: 0.7rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-400);
+  padding-left: 1rem;
+}
+
+.input-name input::placeholder {
+  font-weight: bold;
+  color: var(--gray-400);
+  font-size: 0.9rem;
+}
+
+.input-number {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+  margin: 0 1rem 0 1rem;
+  font-family: inherit;
+}
+
+.input-number label {
+  font-size: 1rem;
+}
+
+.input-number input {
+  width: 89%;
+  padding: 0.7rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-400);
+  padding-left: 1rem;
+}
+
+.input-number input::placeholder {
+  font-weight: bold;
+  color: var(--gray-400);
+  font-size: 0.9rem;
+}
+
+.input-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  margin: 0 0 0 1rem;
+  width: 100%;
+  gap: 0.5rem;
+  font-family: inherit;
+}
+
+.input-date label {
+  font-size: 1rem;
+}
+
+.input-date label span {
+  margin-left: 0.8rem;
+}
+
+.inputs-month-year-cvc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  font-family: inherit;
+}
+
+.month {
+  width: 20%;
+  padding: 0.7rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-400);
+  padding-left: 1rem;
+}
+
+.month::placeholder {
+  font-weight: bold;
+  color: var(--gray-400);
+  font-size: 0.9rem;
+}
+
+.year {
+  width: 20%;
+  padding: 0.7rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-400);
+  padding-left: 1rem;
+}
+
+.year::placeholder {
+  font-weight: bold;
+  color: var(--gray-400);
+  font-size: 0.9rem;
+}
+
+.cvc {
+  width: 41%;
+  padding: 0.7rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-400);
+  padding-left: 1rem;
+}
+
+.cvc::placeholder {
+  font-weight: bold;
+  color: var(--gray-400);
+  font-size: 0.9rem;
+}
+
+.btn {
+  width: 90%;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 1rem 0;
+  background-color: var(--purple-950);
+  color: var(--white);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+/*--------------------------------*/
+
+/*--------------GROUP ERROR---------------*/
+
+.group-error {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.error-name,
+.error-number,
+.error-month,
+.error-year,
+.error-cvc {
+  font-size: 0.4rem;
+  color: red;
+  display: none;
+}
