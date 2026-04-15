@@ -340,6 +340,7 @@ h1 {
   align-items: center;
   gap: 1rem;
   display: none;
+  margin-top: 5rem;
 }
 
 .card-complete h2 {
@@ -471,5 +472,9 @@ h1 {
 
   .cvc {
     width: 43.3%;
+  }
+
+  .card-complete {
+    margin-top: 0;
   }
 }
