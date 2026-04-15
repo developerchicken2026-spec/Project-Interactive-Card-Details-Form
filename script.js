@@ -15,6 +15,9 @@ const useName = document.querySelector("#user-name");
 const userMonth = document.querySelector("#user-month");
 const userYear = document.querySelector("#user-year");
 const userCvc = document.querySelector("#user-cvc");
+const hideInput = document.querySelector(".group-input-details");
+const showComplete = document.querySelector(".card-complete");
+const btnComplete = document.querySelector(".btn-complete");
 console.log(
   errorName,
   errorNumber,
@@ -82,6 +85,25 @@ btn.addEventListener("click", () => {
     inputCvc.style.border = "1px solid var(--gray-400)";
     isValue = true;
   }
+
+  if (
+    inputNameValue &&
+    inputNumberValue &&
+    inputMonthValue &&
+    inputYearValue &&
+    inputCvcValue
+  ) {
+    hideInput.style.display = "none";
+    showComplete.style.display = "flex";
+  } else {
+    hideInput.style.display = "flex";
+    showComplete.style.display = "none";
+  }
+
+  btnComplete.addEventListener("click", () => {
+    hideInput.style.display = "flex";
+    showComplete.style.display = "none";
+  });
 });
 
 inputNumber.addEventListener("input", () => {

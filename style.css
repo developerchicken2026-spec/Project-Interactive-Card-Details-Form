@@ -331,6 +331,45 @@ h1 {
 }
 /*-------------------------------------*/
 
+/* -----------------GROUP COMPLETE-------------*/
+
+.card-complete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  display: none;
+}
+
+.card-complete h2 {
+  font-family: inherit;
+  letter-spacing: 0.05rem;
+}
+
+.card-complete p {
+  color: var(--gray-400);
+}
+
+.btn-complete {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--purple-950);
+  color: var(--white);
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 0.3rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-complete:hover {
+  background-color: rgba(121, 12, 199, 0.9);
+}
 @media (min-width: 1024px) {
   body {
     flex-direction: row;
