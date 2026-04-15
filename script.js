@@ -10,6 +10,11 @@ const errorMonth = document.querySelector(".error-month");
 const errorYear = document.querySelector(".error-year");
 const errorCvc = document.querySelector(".error-cvc");
 const groupErrorMYC = document.querySelector(".group-error");
+const h1Value = document.querySelector("h1");
+const useName = document.querySelector("#user-name");
+const userMonth = document.querySelector("#user-month");
+const userYear = document.querySelector("#user-year");
+const userCvc = document.querySelector("#user-cvc");
 console.log(
   errorName,
   errorNumber,
@@ -76,5 +81,40 @@ btn.addEventListener("click", () => {
     errorCvc.style.display = "none";
     inputCvc.style.border = "1px solid var(--gray-400)";
     isValue = true;
+  }
+});
+
+inputNumber.addEventListener("input", () => {
+  h1Value.textContent = inputNumber.value;
+  if (inputNumber.value === "") {
+    h1Value.textContent = "0000 0000 0000 0000";
+  }
+});
+
+inputName.addEventListener("input", () => {
+  useName.textContent = inputName.value;
+  if (inputName.value === "") {
+    useName.textContent = "Jane Appleseed";
+  }
+});
+
+inputMonth.addEventListener("input", () => {
+  userMonth.textContent = inputMonth.value + "/";
+  if (inputMonth.value === "") {
+    userMonth.textContent = "00";
+  }
+});
+
+inputYear.addEventListener("input", () => {
+  userYear.textContent = inputYear.value;
+  if (inputYear.value === "") {
+    userYear.textContent = "00";
+  }
+});
+
+inputCvc.addEventListener("input", () => {
+  userCvc.textContent = inputCvc.value;
+  if (inputCvc.value === "") {
+    userCvc.textContent = "000";
   }
 });

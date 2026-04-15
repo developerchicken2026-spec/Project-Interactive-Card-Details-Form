@@ -17,14 +17,20 @@
   <body>
     <header class="container">
       <div class="group-img-details">
-        <img class="img-bg" src="./images/bg-main-mobile.png" alt="img bg" />
+        <picture>
+          <source
+            media="(min-width:1024px)"
+            srcset="./images/bg-main-desktop.png"
+          />
+          <img class="img-bg" src="./images/bg-main-mobile.png" alt="img bg" />
+        </picture>
         <div class="group-back">
           <img
             class="img-back"
             src="./images/bg-card-back.png"
             alt="card back"
           />
-          <p>000</p>
+          <p id="user-cvc">000</p>
         </div>
         <div class="group-front">
           <img
@@ -35,8 +41,10 @@
           <img class="icon-logo" src="./images/card-logo.svg" alt="" />
           <h1>0000 0000 0000 0000</h1>
           <div class="text-company-year">
-            <p>Jane Appleseed</p>
-            <span> 00/00</span>
+            <p id="user-name">Jane Appleseed</p>
+            <p>
+              <span id="user-month">00/</span><span id="user-year">00</span>
+            </p>
           </div>
         </div>
       </div>
@@ -51,6 +59,7 @@
             type="text"
             placeholder="e.g. Jane
     Appleseed"
+            maxlength="20"
           />
           <p class="error-name">Wrong name, plase again</p>
         </div>
@@ -60,17 +69,36 @@
             id="number"
             type="text"
             placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="19"
           />
           <p class="error-number">Wrong number, plase again</p>
         </div>
         <div class="input-date">
           <label for="month year cvc"
-            >Exp. Date (MM/YY) YY <span>CVC</span></label
+            ><span>Exp. Date </span>(MM/YY) YY <span class="c">CVC</span></label
           >
           <div class="inputs-month-year-cvc">
-            <input class="month" id="month" type="text" placeholder="MM " />
-            <input class="year" id="year" type="text" placeholder="YY" />
-            <input class="cvc" id="cvc" type="text" placeholder="e.g. 123" />
+            <input
+              maxlength="2"
+              class="month"
+              id="month"
+              type="text"
+              placeholder="MM "
+            />
+            <input
+              maxlength="4"
+              class="year"
+              id="year"
+              type="text"
+              placeholder="YY"
+            />
+            <input
+              maxlength="3"
+              class="cvc"
+              id="cvc"
+              type="text"
+              placeholder="e.g. 123"
+            />
           </div>
           <div class="group-error">
             <p class="error-year">Wrong year, plase again</p>
